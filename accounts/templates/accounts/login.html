@@ -1,0 +1,28 @@
+{% extends "accounts/login_sigin.html" %}
+
+<!---- Content Block  -->
+{% block content %}
+
+<div class="card p-5 shadow text-center">
+    <form action="{% url 'login' %}", method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email_username" placeholder="Email address or Username">
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <div class="mb-3 d-grid">
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+        <div class="mb-3">
+            <a href="">Forgotten password?</a>
+        </div>
+        <div>
+            <hr class="my-4">
+        </div>
+        <button type="submit" class="btn btn-success mb-3">Create new account</button>
+    </form>
+</div>
+
+{% endblock %}

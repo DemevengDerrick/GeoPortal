@@ -1,0 +1,14 @@
+#side_bar{
+    height: 1000px;
+    background-color: aquamarine;
+}
+
+header{
+    height: 50px;
+    background-color: #1877F2;
+}
+
+footer{
+    height: 250px;
+    background-color: rgb(240, 240, 240);
+}

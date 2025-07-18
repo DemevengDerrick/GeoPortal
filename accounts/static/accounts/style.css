@@ -1,0 +1,29 @@
+#login_row{
+    height: 500px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#login_div{
+    height: 750px;
+}
+
+#geoportal{
+    color: #1877F2;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+footer{
+    height: 250px;
+    background-color: rgb(250, 250, 250);
+}
+
+header{
+    height: 100px;
+    background-color: #1877F2;
+}
+
+body{
+    background-color: rgb(242, 243, 243);
+}
