@@ -6,6 +6,9 @@
 <div class="card p-5 shadow text-center">
     <form action="{% url 'create_account' %}", method="post">
         {% csrf_token %}
+        <div class="alert alert-danger" role="alert" id="registration_error">
+            passwords do not match!!
+        </div>
         <div class="mb-3">
             <input type="text" class="form-control" id="first_name" placeholder="First Name">
         </div>
@@ -16,7 +19,7 @@
             <input type="text" class="form-control" id="user_name" placeholder="User Name">
         </div>
         <div class="mb-3">
-            <input type="email" class="form-control" id="email_username" placeholder="Email address or Username">
+            <input type="email" class="form-control" id="email_username" placeholder="Email address">
         </div>
         <div class="mb-3">
             <input type="password" class="form-control" id="password" placeholder="Password">

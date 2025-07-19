@@ -6,6 +6,9 @@
 <div class="card p-5 shadow text-center">
     <form action="{% url 'login' %}", method="post">
         {% csrf_token %}
+        <div class="alert alert-danger" role="alert" id="login_error">
+            Incorrect username of password!!
+        </div>
         <div class="mb-3">
             <input type="email" class="form-control" id="email_username" placeholder="Email address or Username">
         </div>

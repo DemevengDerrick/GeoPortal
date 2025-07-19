@@ -27,3 +27,8 @@ header{
 body{
     background-color: rgb(242, 243, 243);
 }
+
+#login_error, #registration_error {
+    display: none;
+    /* display: block; */
+}
