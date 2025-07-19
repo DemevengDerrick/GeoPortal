@@ -4,6 +4,6 @@ from . import views
 # create url patterns
 
 urlpatterns = [
-    path("", views.index, name="index")
+    path("", views.index, name="map")
 ]
 

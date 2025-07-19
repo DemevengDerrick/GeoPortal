@@ -4,16 +4,17 @@
 {% block content %}
 
 <div class="card p-5 shadow text-center">
-    <form action="{% url 'login' %}", method="post">
+    <form action="{% url 'login_submit' %}", method="post">
         {% csrf_token %}
-        <div class="alert alert-danger" role="alert" id="login_error">
-            Incorrect username of password!!
+        <div class="alert alert-danger" role="alert" id="login_error" 
+            style="display: {% if login_error %} block {% else %} none {% endif %}">
+            {{ login_error }}
         </div>
         <div class="mb-3">
-            <input type="email" class="form-control" id="email_username" placeholder="Email address or Username">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email address">
         </div>
         <div class="mb-3">
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
         </div>
         <div class="mb-3 d-grid">
             <button type="submit" class="btn btn-primary">Log in</button>
