@@ -1,6 +1,5 @@
 #side_bar{
     height: 1000px;
-    background-color: aquamarine;
 }
 
 header{
@@ -11,4 +10,8 @@ header{
 footer{
     height: 250px;
     background-color: rgb(240, 240, 240);
+}
+
+#main_bloc, #map{
+    height: 1000px;
 }

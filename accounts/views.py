@@ -21,7 +21,8 @@ def login_submit(request):
         except Users.DoesNotExist:
             return render(request, 'accounts/login.html', context={"login_error": 'Invalid username or password!'})
     
-    login_page(request)
+    else:
+        return render(request, 'accounts/login.html', context={"login_error": 'Please provide login details!'})
 
 
 
