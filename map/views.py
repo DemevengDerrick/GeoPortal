@@ -11,3 +11,5 @@ def index(request):
     else:
         return redirect('login_page')
 
+
+
