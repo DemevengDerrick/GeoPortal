@@ -24,21 +24,38 @@
     <header>
 
     </header>
-    <div class="row">
-        <div class="col-6 col-md-3 border" id="side_bar">
-
-        </div>
-        <main class="col-6 col-md-9" id="main_bloc">
-        {% block content %}{% endblock %}
+    <div class="row g-0">
+        <main class="col-6 col-md-8" id="main_bloc">
+            {% block content %}{% endblock %}
         </main>
+        <div class="col-6 col-md-4 border d-flex flex-column justify-content-between" id="side_bar">
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">Chatbot</li>
+                    <li class="list-group-item">
+                        <div><b>AI Bot</b></div>
+                        <div>Hi Derrick, Welcome back. Which spatial analysis do you want to do today?</div>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex p-2" style="gap: 0.5rem;">
+                {%csrf_token%}
+                <textarea class="form-control" rows="1" placeholder="Type your message..."></textarea>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
     </div>
 
     <script src="{% static 'map/js/map.js' %}"></script>
 
-    <footer class="row p-5 text-center">
-        <div class="col-12 col-md-4">Developed by Derrick</div>
-        <div class="col-12 col-md-4">Contact</div>
-        <div class="col-12 col-md-4">Follow me</div>
+    <footer class="bg-light">
+        <div class="container">
+            <div class="row p-5 text-center">
+            <div class="col-12 col-md-4">Developed by Derrick</div>
+            <div class="col-12 col-md-4">Contact</div>
+            <div class="col-12 col-md-4">Follow me</div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
