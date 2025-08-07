@@ -30,7 +30,7 @@
         </main>
         <div class="col-6 col-md-4 border d-flex flex-column justify-content-between" id="side_bar">
             <div>
-                <ul class="list-group">
+                <ul class="list-group message-list">
                     <li class="list-group-item active" aria-current="true">Chatbot</li>
                     <li class="list-group-item">
                         <div><b>AI Bot</b></div>
@@ -38,10 +38,10 @@
                     </li>
                 </ul>
             </div>
-            <form class="d-flex p-2" style="gap: 0.5rem;">
+            <form class="d-flex p-2 message-form" style="gap: 0.5rem;">
                 {%csrf_token%}
-                <textarea class="form-control" rows="1" placeholder="Type your message..."></textarea>
-                <button type="submit" class="btn btn-primary">Send</button>
+                <textarea class="form-control message-input" rows="1" placeholder="Type your message..."></textarea>
+                <button type="submit" class="btn btn-primary btn-send">Send</button>
             </form>
         </div>
     </div>
